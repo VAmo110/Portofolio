@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./dist/output.css">
+    <link rel="stylesheet" href="./dist/output.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENG Mohamed Samir - Personal Website</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+    <!-- Three.js for 3D Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.134.0/examples/js/controls/OrbitControls.js"></script>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Arial:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<link rel="stylesheet" href="./dist/output.css">
+<body class="bg-[#1a202c] text-white font-sans overflow-x-hidden">
+    <div class="container mx-auto p-4 relative">
+        <header class="fixed top-0 w-full bg-[#1a202c] shadow-md z-50 p-4 flex justify-between items-center">
+            <h1 class="text-4xl text-[#d69e2e] font-bold transition-colors duration-300 hover:text-yellow-300 gsap-spinSlow">ENG Mohamed Samir</h1>
+            <button id="open-controls" class="text-[#d69e2e] hover:text-yellow-300 transition-colors duration-300 text-lg gsap-hover">Open Controls</button>
+        </header>
+
+        <main>
+            <section id="home" class="section min-h-screen flex flex-col items-center justify-center relative gsap-fadeIn">
+                <div id="three-canvas" class="absolute inset-0 z-0"></div> <!-- 3D Background -->
+                <h2 class="text-3xl text-gray-200 font-bold mb-4">Yo, Nice to Meet You</h2>
+                <h1 class="text-5xl text-white font-bold mb-4 gsap-slideUp">Full-Stack Developer with Chatbot Integration Experience</h1>
+                <p class="text-lg text-gray-400 mb-6">Data Scraping | LLM | MERN | Web3</p>
+                <button class="cta-button bg-[#dc3545] text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-transform duration-300 gsap-hover gsap-click">SCROLL DOWN</button>
+            </section>
+
+            <section id="about" class="section min-h-screen flex flex-col items-center justify-center gsap-slideLeft">
+                <h2 class="text-4xl text-[#d69e2e] font-bold mb-8">About</h2>
+                <img src="https://via.placeholder.com/300" alt="Profile Picture" class="profile-img rounded-lg shadow-md mb-6 gsap-rotateSlow">
+                <p class="text-lg text-gray-400 mb-6 max-w-2xl text-center">As an AI Solutions Developer, Full-Stack Web Enthusiast 🚀, and Blockchain Innovator 🔗, I channel the agility and charm of my spirit animal, the Firefox 🦊, into crafting next-gen digital experiences. Dedicated to revolutionizing web and blockchain with smart, user-first approaches, I thrive on challenges that fuel growth and innovation 💡. Balancing precision with creativity, I deliver projects that not only meet but exceed expectations 🎯. Let's navigate the tech wilderness together, forging paths that are intelligent, engaging, and downright delightful 🌟.</p>
+            </section>
+
+            <section id="what-i-can-do" class="section min-h-screen flex flex-col items-center justify-center relative gsap-slideUp">
+                <h2 class="text-4xl text-[#00b4d8] font-bold mb-8">What I Can Do</h2>
+                <div class="max-w-2xl w-full">
+                    <div class="bg-[#1a202c] p-6 rounded-lg shadow-md mb-4 gsap-zoomIn">
+                        <img src="https://img.icons8.com/?size=100&id=21419&format=png&color=00b4d8" alt="Code Icon" class="w-16 h-16 mb-4">
+                        <h3 class="text-2xl text-[#00b4d8] font-bold">Web & Mobile Frontend Development, Smart Contract ABI Integration, 2D & 3D Animation Development</h3>
+                        <button class="view-work-btn absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-[#1a202c] text-[#00b4d8] border-2 border-[#00b4d8] px-6 py-2 rounded-lg hover:bg-[#00b4d8] hover:text-[#1a202c] transition-colors duration-300 gsap-hover">VIEW WORK</button>
+                    </div>
+                    <div class="bg-[#1a202c] p-6 rounded-lg shadow-md mb-4 gsap-zoomIn delay-200">
+                        <img src="https://img.icons8.com/?size=100&id=37789&format=png&color=00b4d8" alt="Backend Icon" class="w-16 h-16 mb-4">
+                        <h3 class="text-2xl text-[#00b4d8] font-bold">Backend Development</h3>
+                        <p class="text-gray-400 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <button class="view-work-btn absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-[#1a202c] text-[#00b4d8] border-2 border-[#00b4d8] px-6 py-2 rounded-lg hover:bg-[#00b4d8] hover:text-[#1a202c] transition-colors duration-300 gsap-hover">VIEW WORK</button>
+                    </div>
+                    <div class="bg-[#1a202c] p-6 rounded-lg shadow-md mb-4 gsap-zoomIn delay-400">
+                        <img src="https://img.icons8.com/?size=100&id=35458&format=png&color=00b4d8" alt="Certificate Icon" class="w-16 h-16 mb-4">
+                        <h3 class="text-2xl text-[#00b4d8] font-bold">NodeJS Backend Development, Database Design and Optimization, Telegram & Discord Bot</h3>
+                        <button class="view-work-btn absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-[#1a202c] text-[#00b4d8] border-2 border-[#00b4d8] px-6 py-2 rounded-lg hover:bg-[#00b4d8] hover:text-[#1a202c] transition-colors duration-300 gsap-hover">VIEW WORK</button>
+                    </div>
+                    <div class="bg-[#1a202c] p-6 rounded-lg shadow-md gsap-zoomIn delay-600">
+                        <img src="https://img.icons8.com/?size=100&id=20475&format=png&color=00b4d8" alt="Blockchain Icon" class="w-16 h-16 mb-4">
+                        <h3 class="text-2xl text-[#00b4d8] font-bold">Blockchain Development</h3>
+                        <p class="text-gray-400 mt-2">Smart Contract, NFT Minting & Marketplace, NFT & Trading Bot</p>
+                        <button class="view-work-btn absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-[#1a202c] text-[#00b4d8] border-2 border-[#00b4d8] px-6 py-2 rounded-lg hover:bg-[#00b4d8] hover:text-[#1a202c] transition-colors duration-300 gsap-hover">VIEW WORK</button>
+                    </div>
+                </div>
+                <div class="absolute inset-0 opacity-30">
+                    <svg class="w-full h-full" viewBox="0 0 100 100">
+                        <path d="M10 50 Q50 10 90 50 Q50 90 10 50" fill="none" stroke="#d69e2e" stroke-width="2" stroke-dasharray="5" opacity="0.5"/>
+                        <path d="M20 50 Q50 20 80 50 Q50 80 20 50" fill="none" stroke="#d69e2e" stroke-width="2" stroke-dasharray="5" opacity="0.5"/>
+                        <path d="M30 50 Q50 30 70 50 Q50 70 30 50" fill="none" stroke="#d69e2e" stroke-width="2" stroke-dasharray="5" opacity="0.5"/>
+                    </svg>
+                </div>
+            </section>
+
+            <section id="skills" class="section min-h-screen flex flex-col items-center justify-center gsap-slideUp">
+                <h2 class="text-4xl text-[#d69e2e] font-bold mb-8">Skills</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mt-6 max-w-2xl w-full">
+                    <div class="flex flex-col items-center gsap-zoomIn">
+                        <div class="w-24 h-24 bg-[#48bb78] rounded-full flex items-center justify-center text-white font-bold shadow-lg animate-pulseSlow glow">
+                            95%
+                        </div>
+                        <p class="text-[#d69e2e] mt-2">Front-End</p>
+                    </div>
+                    <div class="flex flex-col items-center gsap-zoomIn delay-100">
+                        <div class="w-24 h-24 bg-[#48bb78] rounded-full flex items-center justify-center text-white font-bold shadow-lg animate-pulseSlow delay-100 glow">
+                            95%
+                        </div>
+                        <p class="text-[#d69e2e] mt-2">Animation</p>
+                    </div>
+                    <div class="flex flex-col items-center gsap-zoomIn delay-200">
+                        <div class="w-24 h-24 bg-[#48bb78] rounded-full flex items-center justify-center text-white font-bold shadow-lg animate-pulseSlow delay-200 glow">
+                            85%
+                        </div>
+                        <p class="text-[#d69e2e] mt-2">AI</p>
+                    </div>
+                    <div class="flex flex-col items-center gsap-zoomIn delay-300">
+                        <div class="w-24 h-24 bg-[#48bb78] rounded-full flex items-center justify-center text-white font-bold shadow-lg animate-pulseSlow delay-300 glow">
+                            85%
+                        </div>
+                        <p class="text-[#d69e2e] mt-2">Database</p>
+                    </div>
+                    <div class="flex flex-col items-center gsap-zoomIn delay-400">
+                        <div class="w-24 h-24 bg-[#48bb78] rounded-full flex items-center justify-center text-white font-bold shadow-lg animate-pulseSlow delay-400 glow">
+                            85%
+                        </div>
+                        <p class="text-[#d69e2e] mt-2">Back-end</p>
+                    </div>
+                    <div class="flex flex-col items-center gsap-zoomIn delay-500">
+                        <div class="w-24 h-24 bg-[#48bb78] rounded-full flex items-center justify-center text-white font-bold shadow-lg animate-pulseSlow delay-500 glow">
+                            95%
+                        </div>
+                        <p class="text-[#d69e2e] mt-2">NFT</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="services" class="section min-h-screen flex flex-col items-center justify-center relative gsap-slideRight">
+                <h2 class="text-4xl text-[#d69e2e] font-bold mb-8">Services</h2>
+                <div class="max-w-2xl w-full">
+                    <div class="bg-[#1a202c] p-6 rounded-lg shadow-md mb-4 gsap-zoomIn">
+                        <h3 class="text-2xl text-[#d69e2e] font-bold">Web Development</h3>
+                        <p class="text-gray-400 mt-2">6 years of experience in Web development.</p>
+                        <ul class="list-disc list-inside text-gray-400 mt-2">
+                            <li>Strong HTML + CSS, SCSS, Tailwind CSS, TypeScript</li>
+                            <li>Node.js, express, hapi, Nest</li>
+                            <li>React, Redux, React Hooks, Next, React Native</li>
+                            <li>Apollo, GraphQL, Firebase</li>
+                            <li>MongoDB, mongoose, postgreSQL, MySQL</li>
+                            <li>Codeigniter, Laravel</li>
+                            <li>Responsive Web Design</li>
+                        </ul>
+                        <button class="view-work-btn absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-[#1a202c] text-[#d69e2e] border-2 border-[#d69e2e] px-6 py-2 rounded-lg hover:bg-[#d69e2e] hover:text-[#1a202c] transition-colors duration-300 gsap-hover">VIEW WORK</button>
+                    </div>
+                </div>
+                <div class="absolute inset-0 opacity-30">
+                    <svg class="w-full h-full" viewBox="0 0 100 100">
+                        <path d="M10 50 Q50 10 90 50 Q50 90 10 50" fill="none" stroke="#d69e2e" stroke-width="2" stroke-dasharray="5" opacity="0.5"/>
+                        <path d="M20 50 Q50 20 80 50 Q50 80 20 50" fill="none" stroke="#d69e2e" stroke-width="2" stroke-dasharray="5" opacity="0.5"/>
+                        <path d="M30 50 Q50 30 70 50 Q50 70 30 50" fill="none" stroke="#d69e2e" stroke-width="2" stroke-dasharray="5" opacity="0.5"/>
+                    </svg>
+                </div>
+            </section>
+
+            <section id="web-animations" class="section min-h-screen flex flex-col items-center justify-center relative gsap-slideLeft">
+                <h2 class="text-4xl text-[#d69e2e] font-bold mb-8">Web Animations</h2>
+                <div class="max-w-2xl w-full">
+                    <div class="bg-[#1a202c] p-6 rounded-lg shadow-md mb-4 gsap-zoomIn">
+                        <p class="text-gray-400">I'm very proficient in Web Animation development as I have got an artistic eye for design.</p>
+                        <ul class="list-disc list-inside text-gray-400 mt-2">
+                            <li>Pure CSS animation</li>
+                            <li>3D Animation with Three.js and WebGL</li>
+                            <li>Graphic animation with Canvas</li>
+                            <li>SVG graphic animation design</li>
+                            <li>Parallax scroll animation</li>
+                            <li>ParticlesJS, GreenSockJS and so on.</li>
+                        </ul>
+                        <button class="view-work-btn absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-[#1a202c] text-[#d69e2e] border-2 border-[#d69e2e] px-6 py-2 rounded-lg hover:bg-[#d69e2e] hover:text-[#1a202c] transition-colors duration-300 gsap-hover">VIEW WORK</button>
+                    </div>
+                </div>
+                <div class="absolute inset-0 opacity-30">
+                    <svg class="w-full h-full" viewBox="0 0 100 100">
+                        <path d="M10 50 Q50 10 90 50 Q50 90 10 50" fill="none" stroke="#d69e2e" stroke-width="2" stroke-dasharray="5" opacity="0.5"/>
+                        <path d="M20 50 Q50 20 80 50 Q50 80 20 50" fill="none" stroke="#d69e2e" stroke-width="2" stroke-dasharray="5" opacity="0.5"/>
+                        <path d="M30 50 Q50 30 70 50 Q50 70 30 50" fill="none" stroke="#d69e2e" stroke-width="2" stroke-dasharray="5" opacity="0.5"/>
+                    </svg>
+                </div>
+            </section>
+
+            <section id="blockchain" class="section min-h-screen flex flex-col items-center justify-center relative gsap-slideRight">
+                <h2 class="text-4xl text-[#d69e2e] font-bold mb-8">Blockchain Development</h2>
+                <div class="max-w-2xl w-full">
+                    <div class="bg-[#1a202c] p-6 rounded-lg shadow-md mb-4 gsap-zoomIn">
+                        <p class="text-gray-400">I have been working as a Blockchain developer for 4 years.</p>
+                        <p class="text-gray-400 mt-2">Mostly work as a Blockchain Frontend Developer.</p>
+                        <ul class="list-disc list-inside text-gray-400 mt-2">
+                            <li>React + Web3JS, React + EthersJS</li>
+                            <li>React + Solana/web3</li>
+                            <li>Smart Contract, Solidity, Rust</li>
+                            <li>Ethereum, Solana</li>
+                            <li>NFT mint, NFT marketplace</li>
+                            <li>Discord & Telegram NFT Bot</li>
+                            <li>Binance, Cryptocurrency</li>
+                        </ul>
+                        <button class="view-work-btn absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-[#1a202c] text-[#d69e2e] border-2 border-[#d69e2e] px-6 py-2 rounded-lg hover:bg-[#d69e2e] hover:text-[#1a202c] transition-colors duration-300 gsap-hover">VIEW WORK</button>
+                    </div>
+                </div>
+                <div class="absolute inset-0 opacity-30">
+                    <svg class="w-full h-full" viewBox="0 0 100 100">
+                        <path d="M10 50 Q50 10 90 50 Q50 90 10 50" fill="none" stroke="#d69e2e" stroke-width="2" stroke-dasharray="5" opacity="0.5"/>
+                        <path d="M20 50 Q50 20 80 50 Q50 80 20 50" fill="none" stroke="#d69e2e" stroke-width="2" stroke-dasharray="5" opacity="0.5"/>
+                        <path d="M30 50 Q50 30 70 50 Q50 70 30 50" fill="none" stroke="#d69e2e" stroke-width="2" stroke-dasharray="5" opacity="0.5"/>
+                    </svg>
+                </div>
+            </section>
+
+            <section id="ai-integration" class="section min-h-screen flex flex-col items-center justify-center relative gsap-slideLeft">
+                <h2 class="text-4xl text-[#d69e2e] font-bold mb-8">AI Integration</h2>
+                <div class="max-w-2xl w-full">
+                    <div class="bg-[#1a202c] p-6 rounded-lg shadow-md mb-4 gsap-zoomIn">
+                        <p class="text-gray-400">Artificial intelligence integration experience through 4 projects</p>
+                        <ul class="list-disc list-inside text-gray-400 mt-2">
+                            <li>Machine Learning</li>
+                            <li>Natural Language Processing</li>
+                            <li>ChatGPT</li>
+                            <li>Deep Learning</li>
+                            <li>TensorFlow</li>
+                            <li>Computer Vision</li>
+                        </ul>
+                        <button class="view-work-btn absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-[#1a202c] text-[#d69e2e] border-2 border-[#d69e2e] px-6 py-2 rounded-lg hover:bg-[#d69e2e] hover:text-[#1a202c] transition-colors duration-300 gsap-hover">VIEW WORK</button>
+                    </div>
+                </div>
+                <div class="absolute inset-0 opacity-30">
+                    <svg class="w-full h-full" viewBox="0 0 100 100">
+                        <path d="M10 50 Q50 10 90 50 Q50 90 10 50" fill="none" stroke="#d69e2e" stroke-width="2" stroke-dasharray="5" opacity="0.5"/>
+                        <path d="M20 50 Q50 20 80 50 Q50 80 20 50" fill="none" stroke="#d69e2e" stroke-width="2" stroke-dasharray="5" opacity="0.5"/>
+                        <path d="M30 50 Q50 30 70 50 Q50 70 30 50" fill="none" stroke="#d69e2e" stroke-width="2" stroke-dasharray="5" opacity="0.5"/>
+                    </svg>
+                </div>
+            </section>
+
+            <section id="portfolio" class="section min-h-screen flex flex-col items-center justify-center relative gsap-slideRight">
+                <h2 class="text-4xl text-[#d69e2e] font-bold mb-8">Previous Works</h2>
+                <div class="max-w-2xl w-full mb-4">
+                    <div class="flex gap-4 mb-4">
+                        <button class="filter-btn bg-[#1a202c] text-[#d69e2e] px-4 py-2 rounded-lg hover:bg-[#d69e2e] hover:text-[#1a202c] transition-colors duration-300 gsap-hover">All</button>
+                        <button class="filter-btn bg-[#1a202c] text-[#d69e2e] px-4 py-2 rounded-lg hover:bg-[#d69e2e] hover:text-[#1a202c] transition-colors duration-300 gsap-hover">Website</button>
+                        <button class="filter-btn bg-[#1a202c] text-[#d69e2e] px-4 py-2 rounded-lg hover:bg-[#d69e2e] hover:text-[#1a202c] transition-colors duration-300 gsap-hover">Animation</button>
+                        <button class="filter-btn bg-[#1a202c] text-[#d69e2e] px-4 py-2 rounded-lg hover:bg-[#d69e2e] hover:text-[#1a202c] transition-colors duration-300 gsap-hover">Blockchain</button>
+                        <button class="filter-btn bg-[#1a202c] text-[#d69e2e] px-4 py-2 rounded-lg hover:bg-[#d69e2e] hover:text-[#1a202c] transition-colors duration-300 gsap-hover">AI</button>
+                    </div>
+                    <div class="project-grid grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+                        <div class="project-card bg-[#1a202c] p-6 rounded-lg shadow-md hover:shadow-lg transition-transform duration-300 hover:scale-105 animate-zoomIn gsap-zoomIn category-website category-all">
+                            <h3 class="text-xl text-gray-200 font-bold">Project 1</h3>
+                            <p class="text-gray-400">Intelligent project management app using AI.</p>
+                        </div>
+                        <div class="project-card bg-[#1a202c] p-6 rounded-lg shadow-md hover:shadow-lg transition-transform duration-300 hover:scale-105 animate-zoomIn delay-200 gsap-zoomIn category-animation category-all">
+                            <h3 class="text-xl text-gray-200 font-bold">Project 2</h3>
+                            <p class="text-gray-400">Responsive website using Tailwind CSS.</p>
+                        </div>
+                        <div class="project-card bg-[#1a202c] p-6 rounded-lg shadow-md hover:shadow-lg transition-transform duration-300 hover:scale-105 animate-zoomIn delay-400 gsap-zoomIn category-blockchain category-all">
+                            <h3 class="text-xl text-gray-200 font-bold">Project 3</h3>
+                            <p class="text-gray-400">Smart data analysis system.</p>
+                        </div>
+                        <div class="project-card bg-[#1a202c] p-6 rounded-lg shadow-md hover:shadow-lg transition-transform duration-300 hover:scale-105 animate-zoomIn delay-600 gsap-zoomIn category-ai category-all">
+                            <h3 class="text-xl text-gray-200 font-bold">Project 4</h3>
+                            <p class="text-gray-400">AI-powered chatbot integration.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute inset-0 opacity-30">
+                    <svg class="w-full h-full" viewBox="0 0 100 100">
+                        <path d="M10 50 Q50 10 90 50 Q50 90 10 50" fill="none" stroke="#d69e2e" stroke-width="2" stroke-dasharray="5" opacity="0.5"/>
+                        <path d="M20 50 Q50 20 80 50 Q50 80 20 50" fill="none" stroke="#d69e2e" stroke-width="2" stroke-dasharray="5" opacity="0.5"/>
+                        <path d="M30 50 Q50 30 70 50 Q50 70 30 50" fill="none" stroke="#d69e2e" stroke-width="2" stroke-dasharray="5" opacity="0.5"/>
+                    </svg>
+                </div>
+            </section>
+
+            <section id="interested" class="section min-h-screen flex flex-col items-center justify-center relative gsap-slideLeft">
+                <h2 class="text-4xl text-[#d69e2e] font-bold mb-8">Interested?</h2>
+                <div class="max-w-md w-full">
+                    <div class="bg-[#1a202c] p-6 rounded-lg shadow-md mb-4 gsap-zoomIn">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-envelope mr-3 text-gray-400"></i>
+                            <p class="text-gray-400">ryotasuzuki91@gmail.com</p>
+                        </div>
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-clock mr-3 text-gray-400"></i>
+                            <p class="text-gray-400">Full Time Availability</p>
+                        </div>
+                        <div class="flex items-center mb-4">
+                            <i class="fab fa-github mr-3 text-gray-400"></i>
+                            <p class="text-gray-400">GitHub: seniorsenior017</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fab fa-whatsapp mr-3 text-gray-400"></i>
+                            <p class="text-gray-400">WhatsApp: +81 70-4680-3537</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute inset-0 opacity-30">
+                    <svg class="w-full h-full" viewBox="0 0 100 100">
+                        <path d="M10 50 Q50 10 90 50 Q50 90 10 50" fill="none" stroke="#d69e2e" stroke-width="2" stroke-dasharray="5" opacity="0.5"/>
+                        <path d="M20 50 Q50 20 80 50 Q50 80 20 50" fill="none" stroke="#d69e2e" stroke-width="2" stroke-dasharray="5" opacity="0.5"/>
+                        <path d="M30 50 Q50 30 70 50 Q50 70 30 50" fill="none" stroke="#d69e2e" stroke-width="2" stroke-dasharray="5" opacity="0.5"/>
+                    </svg>
+                </div>
+            </section>
+
+            <section id="contact" class="section min-h-screen flex flex-col items-center justify-center gsap-slideRight">
+                <h2 class="text-4xl text-[#d69e2e] font-bold mb-8">Contact</h2>
+                <form class="max-w-md w-full p-6 bg-[#1a202c] rounded-lg shadow-md">
+                    <input type="text" placeholder="Your Name" required class="w-full p-3 mb-4 border border-gray-700 rounded-lg bg-[#1a202c] text-white placeholder-gray-400">
+                    <input type="email" placeholder="Your Email" required class="w-full p-3 mb-4 border border-gray-700 rounded-lg bg-[#1a202c] text-white placeholder-gray-400">
+                    <textarea placeholder="Your Message" required class="w-full p-3 mb-4 border border-gray-700 rounded-lg bg-[#1a202c] text-white placeholder-gray-400 h-32"></textarea>
+                    <button type="submit" class="bg-[#dc3545] text-white px-6 py-3 rounded-lg hover:bg-red-700 transition-transform duration-300 gsap-hover gsap-click">Send</button>
+                </form>
+                <div class="mt-6 flex gap-4">
+                    <a href="https://linkedin.com/in/mohamed-samir" class="text-[#d69e2e] hover:text-yellow-300 transition-colors duration-300 gsap-hover"><i class="fab fa-linkedin fa-2x"></i></a>
+                    <a href="https://github.com/mohamed-samir" class="text-[#d69e2e] hover:text-yellow-300 transition-colors duration-300 gsap-hover"><i class="fab fa-github fa-2x"></i></a>
+                    <a href="https://twitter.com/mohamed-samir" class="text-[#d69e2e] hover:text-yellow-300 transition-colors duration-300 gsap-hover"><i class="fab fa-twitter fa-2x"></i></a>
+                </div>
+            </section>
+        </main>
+
+        <footer class="text-center p-4 border-t-2 border-[#d69e2e] text-gray-400 gsap-fadeIn">
+            <p>© 2025 ENG Mohamed Samir. All Rights Reserved.</p>
+        </footer>
+
+        <!-- Chat AI Window -->
+        <div id="chat-bot" class="chat-bot fixed bottom-6 right-6 w-80 bg-[#1a202c] shadow-lg rounded-lg flex flex-col z-50 hidden">
+            <div class="chat-header bg-[#dc3545] text-white p-3 rounded-t-lg text-center flex justify-between items-center">
+                <span>Chat AI - Your Assistant</span>
+                <button id="close-chat" class="text-white hover:text-gray-200 gsap-hover"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="chat-messages p-3 h-48 overflow-y-auto bg-[#1a202c]" id="chat-messages"></div>
+            <div class="p-3 flex gap-2">
+                <input type="text" id="chat-input" placeholder="Type your message..." class="flex-1 p-2 border border-gray-700 rounded-lg bg-[#1a202c] text-white placeholder-gray-400">
+                <button id="send-chat" class="bg-[#dc3545] text-white px-3 rounded-lg hover:bg-red-700 transition-colors duration-300 gsap-hover gsap-click"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+
+        <!-- Open Chat Button with Notification -->
+        <button id="open-chat" class="fixed bottom-6 right-6 bg-[#48bb78] text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition-colors duration-300 animate-pulse relative gsap-hover">
+            <i class="fas fa-comment"></i>
+            <span class="absolute top-0 right-0 bg-[#dc3545] text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">1</span>
+        </button>
+
+        <!-- Controls Modal -->
+        <div id="controls-modal" class="fixed inset-0 bg-[#1a202c] bg-opacity-75 flex items-center justify-center hidden z-50">
+            <div class="bg-[#1a202c] p-6 rounded-lg shadow-lg w-80">
+                <h2 class="text-2xl text-[#d69e2e] font-bold mb-4">Controls</h2>
+                <p class="text-gray-400 mb-4">Customize your experience:</p>
+                <button id="close-controls" class="bg-[#dc3545] text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors duration-300 gsap-hover gsap-click">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

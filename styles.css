@@ -1,0 +1,170 @@
+.background-animation {
+    background: linear-gradient(45deg, rgba(220, 53, 69, 0.3), rgba(26, 32, 44, 0.9)); /* Red gradient on dark background */
+    animation: bgMove 10s infinite ease-in-out;
+    z-index: -1;
+}
+
+.view-work-btn {
+    position: absolute;
+    bottom: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px dashed #d69e2e;
+    background: #1a202c;
+    color: #d69e2e;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.view-work-btn:hover, .view-work-btn.gsap-hover:hover {
+    background: #d69e2e;
+    color: #1a202c;
+    transform: scale(1.05);
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.filter-btn:hover, .filter-btn.gsap-hover:hover {
+    background: #d69e2e;
+    color: #1a202c;
+    transform: scale(1.05);
+}
+
+.filter-btn.active {
+    background: #d69e2e;
+    color: #1a202c;
+}
+
+.project-card {
+    display: none;
+}
+
+.project-card.category-all, .project-card.category-website, .project-card.category-animation, .project-card.category-blockchain, .project-card.category-ai {
+    display: block;
+}
+
+.glow {
+    box-shadow: 0 0 10px rgba(72, 187, 120, 0.7), 0 0 20px rgba(72, 187, 120, 0.5), 0 0 30px rgba(72, 187, 120, 0.3);
+}
+
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@keyframes bgMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.gsap-fadeIn {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.gsap-slideUp {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.gsap-slideLeft {
+    opacity: 0;
+    transform: translateX(50px);
+}
+
+.gsap-slideRight {
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+.gsap-spinSlow {
+    animation: spinSlow 4s infinite linear;
+}
+
+.gsap-rotateSlow {
+    animation: rotateSlow 3s infinite linear;
+}
+
+.gsap-zoomIn {
+    opacity: 0;
+    transform: scale(0.5);
+}
+
+.gsap-hover {
+    transition: transform 0.3s ease-in-out;
+}
+
+.gsap-hover:hover {
+    transform: scale(1.1);
+}
+
+.gsap-click {
+    transition: transform 0.3s ease-in-out;
+}
+
+.gsap-click:active {
+    transform: scale(0.95);
+}
+
+.animate-pulse {
+    animation: pulse 2s infinite;
+}
+
+.animate-pulseSlow {
+    animation: pulseSlow 3s infinite;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideLeft {
+    0% { opacity: 0; transform: translateX(50px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideRight {
+    0% { opacity: 0; transform: translateX(-50px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes spinSlow {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes rotateSlow {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes zoomIn {
+    0% { opacity: 0; transform: scale(0.5); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes pulseSlow {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
