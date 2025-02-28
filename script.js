@@ -1,8 +1,12 @@
 // Initialize GSAP and plugins
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
+import gsap from "../node_modules/gsap/index.js";
+import { ScrollTrigger } from "../node_modules/gsap/ScrollTrigger.js";
+import { ScrollToPlugin } from "../node_modules/gsap/ScrollToPlugin.js";
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
 // Animations using GSAP
 document.addEventListener('DOMContentLoaded', () => {
     // Apply animations to sections
