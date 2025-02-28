@@ -1,6 +1,8 @@
 // Initialize GSAP and plugins
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 // Animations using GSAP
 document.addEventListener('DOMContentLoaded', () => {
     // Apply animations to sections
@@ -247,7 +249,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function addMessage(message, type) {
         const messageElement = document.createElement('p');
         messageElement.textContent = message;
-        messageElement.className = mb-2 ${type === 'user' ? 'text-right text-[#d69e2e]' : 'text-left text-gray-200'};
+        messageElement.className = `mb-2 ${type === 'user' ? 'text-right text-[#d69e2e]' : 'text-left text-gray-200'}`;
         chatMessages.appendChild(messageElement);
         chatMessages.scrollTop = chatMessages.scrollHeight;
     }
@@ -306,7 +308,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const category = button.textContent.toLowerCase();
             const projectCards = document.querySelectorAll('.project-card');
             projectCards.forEach(card => {
-                if (category === 'all' || card.classList.contains(category-${category})) {
+                if (category === 'all' || card.classList.contains(`category-${category}`)) {
+
                     card.style.display = 'block';
                     gsap.from(card, { opacity: 0, y: 50, duration: 0.5, ease: "power2.inOut" });
                 } else {
